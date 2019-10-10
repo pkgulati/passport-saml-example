@@ -1,0 +1,22 @@
+{
+    "issuer": {
+        "_": "https://pingone.com/idp/edgeverve",
+        "$": {
+            "xmlns:saml": "urn:oasis:names:tc:SAML:2.0:assertion"
+        }
+    },
+    "sessionIndex": "I1MEpvdOCGmswjiiKoPGbgjR9uxLDH2MOWT7sJTK0LCwFt-5dUDg",
+    "nameID": "kpraveen@edgeverve.com",
+    "nameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+    "firstName": "Praveen",
+    "subject": "kpraveen@edgeverve.com",
+    "memberOf": [
+        "Domain Administrators@directory",
+        "Users@directory",
+        "PINGONE.CLOUD.DIRECTORY.GROUP.UI.ENTITLEMENT.OKRGSKYHXRGFKJGBNOGIKRSAZZQJNYFCMKHFULMJPTFRBI"
+    ],
+    "PingOne.idpid": "70502611-52b0-4aec-832b-e3940957f26d",
+    "PingOne.AuthenticatingAuthority": "https://pingone.com/idp/edgeverve",
+    "email": "kpraveen@edgeverve.com"
+}
+

@@ -1,5 +1,6 @@
 const express = require('express');
-const http = require('http');
+const https = require('https');
+const fs = require('fs');
 const path = require('path');
 const passport = require('passport');
 const morgan = require('morgan');
@@ -38,6 +39,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 require('./config/routes')(app, config, passport);
 
-app.listen(app.get('port'), 'finacletreasury.com', function () {
+
+https.createServer({
+  key: fs.readFileSync('sp-private.key'),
+  cert: fs.readFileSync('sp-x509.cert')
+}, app).listen(app.get('port'), 'finacletreasury.com', function () {
   console.log('Express server listening on port ' + app.get('port'));
 });
+

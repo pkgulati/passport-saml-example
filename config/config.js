@@ -17,17 +17,18 @@ module.exports = {
         cert: fs.readFileSync('./saml-idp-public-cert.pem', 'utf-8'),
         privateCert1: fs.readFileSync('./sp-private.key', 'utf-8')
       },
-      samltest: {
+      saml: {
         remarks:'samltest.id',
         path: process.env.SAML_PATH || '/desktop/login',
-        callbackUrl:'http://finacletreasury.com:3000/desktop/login',
-        entryPoint: process.env.SAML_ENTRY_POINT || 'http://localhost:7000',
+        callbackUrl:'https://finacletreasury.com:3000/desktop/login',
+        logoutUrl:"https://samltest.id/idp/profile/SAML2/Redirect/SLO",
+        entryPoint: process.env.SAML_ENTRY_POINT || 'https://samltest.id/idp/profile/SAML2/Redirect/SSO',
         issuer: 'finacletreasury.com',
-        skipRequestCompression:true,
-        cert: fs.readFileSync('./ping-idp-public-cert.pem', 'utf-8'),
-        privateCert1: fs.readFileSync('./sp-private.key', 'utf-8')
+        skipRequestCompression:false,
+        cert: fs.readFileSync('./samltest.pem', 'utf-8'),
+        privateCert: fs.readFileSync('./sp-private.key', 'utf-8')
       },
-      saml: {
+      samlping: {
         remarks:'pingidentity and pingone',
         path: process.env.SAML_PATH || '/desktop/login',
         xxxauthnRequestBinding: "HTTP-POST",

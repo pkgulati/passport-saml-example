@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2019-09-15T10:22:52Z" cacheDuration="PT604800S" entityID="finacletreasury.com">
+  <md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIICgDCCAemgAwIBAgIBADANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJpbjESMBAGA1UECAwJS0FSTkFUQUtBMRIwEAYDVQQKDAllZGdldmVydmUxEjAQBgNVBAMMCWVkZ2V2ZXJ2ZTESMBAGA1UEBwwJQkFOR0FMT1JFMB4XDTE5MDkwMjE2NDExMloXDTIwMDkwMTE2NDExMlowXTELMAkGA1UEBhMCaW4xEjAQBgNVBAgMCUtBUk5BVEFLQTESMBAGA1UECgwJZWRnZXZlcnZlMRIwEAYDVQQDDAllZGdldmVydmUxEjAQBgNVBAcMCUJBTkdBTE9SRTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAr0sMRL+ongTzIOXuthD8xQs/dhR45ikAJUvoW0yyBnWQigLq9uNsORH7Lkzf2nBamt2l4Q1YqMPKHIXOQZJJ8aFNA3avZcNRiboXlE+g6X/N5JbYcdKmlgqCxjl6zhFAHGyGGzOWcaB6aofWEtSw3nJ3fCh0Ga+p2NpVM2z+qOsCAwEAAaNQME4wHQYDVR0OBBYEFIO5j323UzeTV+1g3p3c7P6vy22lMB8GA1UdIwQYMBaAFIO5j323UzeTV+1g3p3c7P6vy22lMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADgYEAFljbWlG9DkHR/oDOiw5HqE6V4zNHIBZwbNbNHxWCixzP0UZ6BdpKL7tu/zMOFOM6CqDqBIvQfE5vnRS5CGtwAdK5c7SXX2+zYJDZUNDznp5CgfZ28pADZxMsZPzYb6GqXyRrAzqtz1paplDneDEojhD2GZhkK7/rTiue3HSaTNo=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://finacletreasury.com:3000/desktop/logout"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://finacletreasury.com:3000/desktop/login" index="1"/>
+  </md:SPSSODescriptor>
+</md:EntityDescriptor>

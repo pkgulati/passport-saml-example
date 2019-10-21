@@ -205,6 +205,17 @@ app.get('/pk1', function(req, res) {
   });
 
 
+app.get('/finacletreasury/desktop/sso', function (req, res) {
+  console.log('hello');
+  passport.authenticate(config.passport.strategy,
+    {
+      successRedirect: '/',
+      failureRedirect: '/login'
+    })
+});
+
+
+
 app.get('/profile', function (req, res) {
   if (req.isAuthenticated()) {
     res.render('profile',

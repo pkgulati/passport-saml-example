@@ -17,10 +17,11 @@ module.exports = {
         cert: fs.readFileSync('./saml-idp-public-cert.pem', 'utf-8'),
         privateCert1: fs.readFileSync('./sp-private.key', 'utf-8')
       },
-      saml: {
+      samltest: {
         remarks:'samltest.id',
         path: process.env.SAML_PATH || '/desktop/login',
         callbackUrl:'https://finacletreasury.com:3000/desktop/login',
+        identifierFormat:'urn:oasis:names:tc:SAML:1.1:nameid-format:transient',
         logoutUrl:"https://samltest.id/idp/profile/SAML2/Redirect/SLO",
         entryPoint: process.env.SAML_ENTRY_POINT || 'https://samltest.id/idp/profile/SAML2/Redirect/SSO',
         issuer: 'finacletreasury.com',
@@ -28,7 +29,21 @@ module.exports = {
         cert: fs.readFileSync('./samltest.pem', 'utf-8'),
         privateCert: fs.readFileSync('./sp-private.key', 'utf-8')
       },
-      samlping: {
+      saml: {
+        remarks:'pingidentity clinten',
+        path: process.env.SAML_PATH || '/finacletreasury/desktop/sso',
+        xxxauthnRequestBinding: "HTTP-POST",
+        callbackUrl:'https://examplebank.com:3000/finacletreasury/desktop/sso',
+        entryPoint: process.env.SAML_ENTRY_POINT || 'https://sso.connect.pingidentity.com/sso/idp/SSO.saml2?saasid=468b2bf6-e27d-4c8c-9cde-fc6e0804186a&idpid=73174979-029d-4cc0-bf84-996b7d50f3ca',
+        issuer: 'examplebank.com/finacletreasury',
+        skipRequestCompression:false,
+        logoutUrl:"https://examplebank.com:3000/finacletreasury/desktop/slo",
+        signatureAlgorithm:'sha256',
+        cert: fs.readFileSync('./ping2-idp-public-cert.pem', 'utf-8'),
+        privateCert: fs.readFileSync('./sp-private.key', 'utf-8'),
+        decryptionPvk:fs.readFileSync('./sp-private.key', 'utf-8')
+      },
+      samlpkg: {
         remarks:'pingidentity and pingone',
         path: process.env.SAML_PATH || '/desktop/login',
         xxxauthnRequestBinding: "HTTP-POST",

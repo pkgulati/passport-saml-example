@@ -20,6 +20,7 @@ module.exports = function (passport, config) {
       privateCert: config.passport.saml.privateCert,
       callbackUrl:config.passport.saml.callbackUrl,
       logoutUrl:config.passport.saml.logoutUrl,
+      identifierFormat:config.passport.saml.identifierFormat,
       signatureAlgorithm:config.passport.saml.signatureAlgorithm,
       additionalAuthorizeParams:config.passport.saml.additionalAuthorizeParams,
       skipRequestCompression:config.passport.saml.skipRequestCompression,

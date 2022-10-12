@@ -36,7 +36,7 @@
     "morgan": "1.7.0",
     "nodemon": "1.9.2",
     "passport": "0.3.2",
-    "passport-saml": "0.15.0",
+    "passport-saml": "3.2.2",
     "xml-formatter": "^1.2.0"
   },
   "devDependencies": {
